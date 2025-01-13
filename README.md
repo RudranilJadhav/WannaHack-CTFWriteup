@@ -119,63 +119,215 @@ _Writeup of challenges solved by me during WannaHack2025 , a annual Capture the 
   ```
 - Flag : WannaHack{l3457_significant_3u7_1mp0r74n7}
 
-  ### 12. Rules
-  **Submission Time** @ Jan 11th 7:54:58 PM
-  **Value** : 50 , **Tag** : Web
+### 12. Rules
+**Submission Time** @ Jan 11th 7:54:58 PM
+**Value** : 50 , **Tag** : Web
 
-  ***Solution***
-  - The most obvious thing to do was submit flag as WannaHack{flag_string} as solution but this is just a red herring.
-  - Upon opening **Inspect Tab** under **Elements** menu we can see the **HTML** used for website.
-  - The flag is part of **comment** inside the pages HTML content.
-  - Flag : WannaHack{4lw4ys_r34d_7h3_ru135}
+***Solution***
+- The most obvious thing to do was submit flag as WannaHack{flag_string} as solution but this is just a red herring.
+- Upon opening **Inspect Tab** under **Elements** menu we can see the **HTML** used for website.
+- The flag is part of **comment** inside the pages HTML content.
+- Flag : WannaHack{4lw4ys_r34d_7h3_ru135}
 
-  ### 13. Sanity 2
-  **Submission Time** @ Jan 11th 11:00:13 PM
-  **Value** : 136 , **Tag** : Misc
+### 13. Sanity 2
+**Submission Time** @ Jan 11th 11:00:13 PM
+**Value** : 136 , **Tag** : Misc
 
-  ***Solution***
-  - I stumbled upon solution of **Sanity 2** accidently while looking at Discord for solution  of **Sanity**.
-  - After looking at evey channel and chat in hopes of finding solution of **Sanity** , in despartely I just searched word **WannaHack** on search bar.
-  - This obviously showed me all chats with word **Wanna Hack** in it but also showed me meme of rickroll sent by **[kn1gh7](https://tenor.com/view/rick-roll-gif-25917805)**.
-  - I didn't understood then how was that flag hidden in the image but now after learning to write in **markdown** , I understand it now.
-  - Flag : WannaHack{d15c0rd_15_4_5c4ry_b3457_6969}
+***Solution***
+- I stumbled upon solution of **Sanity 2** accidently while looking at Discord for solution  of **Sanity**.
+- After looking at evey channel and chat in hopes of finding solution of **Sanity** , in despartely I just searched word **WannaHack** on search bar.
+- This obviously showed me all chats with word **Wanna Hack** in it but also showed me meme of rickroll sent by **[kn1gh7](https://tenor.com/view/rick-roll-gif-25917805)**.
+- I didn't understood then how was that flag hidden in the image but now after learning to write in **markdown** , I understand it now.
+- Flag : WannaHack{d15c0rd_15_4_5c4ry_b3457_6969}
 
-  ### 14. Sanity
-  **Submission Time** @ Jan 11th 11:21:07 PM
-  **Value** : 50 , **Tag** : Misc
+### 14. Sanity
+**Submission Time** @ Jan 11th 11:21:07 PM
+**Value** : 50 , **Tag** : Misc
 
-  ***Solution***
-  - The Sanity Txt file was a massive red herring for this challenge and quite waste of time for me too.
-  - I was bit biased towards thought that flag must be hidden in chat or in admin profile ( Like CicadaIITBHU) that I just didn't noticed sub-heading of **#rules** for quite a lot of time.
-  - Flag : WannaHack{y0u_4r3_54n3_6969}
+***Solution***
+- The Sanity Txt file was a massive red herring for this challenge and quite waste of time for me too.
+- I was bit biased towards thought that flag must be hidden in chat or in admin profile (Like CicadaIITBHU) that I just didn't noticed sub-heading of **#rules** for quite a lot of time.
+- Flag : WannaHack{y0u_4r3_54n3_6969}
 
-  ### 15. Easy Cat
-  **Submission Time** @ Jan 12th 1:13:56 AM
-  **Value** : 50 , **Tag** : PWN
+### 15. Easy Cat
+**Submission Time** @ Jan 12th 1:13:56 AM
+**Value** : 50 , **Tag** : PWN
 
-  ***Solution***
-  - This one is also preaty stright forward
-  - Just click on Initiate Suffering and put the given commmand in WSL/Linux/Ubantu terminal.
-  -  Flag : WannaHack{345y_netcat_fVcHlP9D}
+***Solution***
+- This one is also preaty stright forward
+- Just click on Initiate Suffering and put the given commmand in WSL/Linux/Ubantu terminal.
+-  Flag : WannaHack{345y_netcat_fVcHlP9D}
 
-  ### 16. Cheap Amazon
-  **Submisiion Time** @ Jan 12th 1:32:53 AM
-  **Value** : 50 , **Tag** : PWN
+### 16. Cheap Amazon
+**Submisiion Time** @ Jan 12th 1:32:53 AM
+**Value** : 50 , **Tag** : PWN
 
-  ***Solution***
-  - Challenge had a C file and a NetCat link in it. Upon running nc command in terminal I realised that the provided chall.c file is code used in NetCat link.
-  - Our goal is to find vulnerability in C code to make our balance enough to buy flag.
-  - We can exploit it with integer underflow.
-  - Following is one exmple of inputs to cause underflow and buy flag :
-    ```
+***Solution***
+- Challenge had a C file and a NetCat link in it. Upon running nc command in terminal I realised that the provided chall.c file is code used in NetCat link.
+- Our goal is to find vulnerability in C code to make our balance enough to buy flag.
+- We can exploit it with integer underflow.
+- Following is one exmple of inputs to cause underflow and buy flag :
+  ```
     Option : 1
     Enter amount of money to withdraw : -20000000000
     Option : 2
     Enter amount of money to withdraw : -20000000000
     Option: 3
-    ```
-  - Flag : WannaHack{w3lc0m3_70_pwn1ng_VGtoEJct}
+  ```
+- Flag : WannaHack{w3lc0m3_70_pwn1ng_VGtoEJct}
 
-  ### 17. Cheap Amazon Revange
-  **Submission Time** @ Jan 12th 1:44:59 AM
-  **Value**
+### 17. Cheap Amazon Revange
+**Submission Time** @ Jan 12th 1:44:59 AM
+**Value** : 50 , **Tag** : PWN
+
+***Solution***
+- The key idea of this question is same as **Cheap Amazon**
+- This time though we cant input < 0 but other key vulnerability added in program is from the line :
+  ```
+  input = input * 100
+  ```
+- As this time we can input a large number which will not overflow to negetive number but after cheaking input < 0 condition it will execute input = input * 100 causing it to overflow after cheak.
+- If we deposited a negetive sum money it will increase our money instead of decreasing.
+  ```
+  Option :  2
+  Enter number of Rs.100 gift cards to deposit: 2000000000
+  Option : 3
+  ```
+- Flag : WannaHack{1n73g3r_0v3rfl0w_CSO101_agFc5Mf1}
+
+### 18. Basics
+**Submission Time** @ Jan 12th 3:21::18 AM  
+**Value** : 379 , **Tag** : PPC  
+
+***Solution***  
+- The challenge desription talks about pwntools , as some one who didn't used pwn ever I spent quite sometime learning about PWN through Youtube and Google and read some solutions about PWN CTF's to understand its implemention in CTF.
+- As I already know decent about Python , Coding wasn't a huge issue.
+- Basiclly we open connection with wannahack.iitbhucybersec on a port and then recive and send data using Python Code.
+  ```
+  from pwn import *
+  import requests
+
+  io = remote('wannahack.iitbhucybersec.in', 28632)
+  io.recvuntil('I GIVE:')
+  for _ in range(250):
+    line = io.recvline().decode().strip()
+    if 'I GIVE:' in line:
+        i = int(line.strip('I GIVE:').strip())
+        io.sendline(str(i**2))
+    elif 'You Give:' not in line:
+        print(line)
+  ```
+- Flag : WannaHack{pwntools_m4g1c_duBuTWnd}
+
+### 18. impossible  
+**Submission Time** @ Jan 12th 4:43:05 AM  
+**Value** : 120 , **Tag** : Misc  
+
+***Solution***  
+- We have to enter string whoes length is less than 20 but still after using upper method on string then length needs to be 25 , sounds impossible right?
+- Well NO, There are special unicode character that expand in length when transformed by .upper(). For example The German Eszett (ß) becomes SS when converted to
+uppercase.
+- Hence a string like ßßßßßßßßßßßßS would satify all the conditions.
+- Flag : WannaHack{m0r3_l1k3_1_4m_p0551bl3_0aHYUg10}
+
+### 19. Guess  
+**Submission Time** : Jan 12th 10:35:23 AM  
+**Value** : 405 , **Tag** : PPC  
+
+***Solution**  
+- Challenge ask us to guess a random number between 1 to 100000000 with in 30 attempts and gives us hint *Higher* or *Lower* after every attempt.
+- **Binary Search** is our only way to Guess the number within 30 attempts.
+- I wrote the following Binary Search Code to get the right guess.
+  ```
+  from pwn import *
+  io = remote('wannahack.iitbhucybersec.in', 35867)
+  io.recvuntil('[1] YOUR GUESS: ')
+
+  low = 0
+  high = 100000000
+  for _ in range(100):
+      mid = (low + high) // 2
+      io.sendline(str(mid))
+      res = io.recvline().decode().strip()
+      if 'HIGHER' in res:
+          low = mid
+      elif 'LOWER' in res:
+          high = mid
+      else:
+          print(res)
+  ```
+- Flag : WannaHack{m3n_gu335_suks_5tjZX6A8}  
+
+### 20. Easy Sudoko  
+**Submission Time** @ Jan 12th 12:08:37 PM  
+**Value** : 405 , **Tag** : 292  
+
+***Solution***  
+- Just like previours problem this one too don't require exctrating a data from file or find hidden information , All we have to do is program to solve sudoku and recive and send requests via PWN tools.
+- I used a sudoko solver program from GreekForGreeks and modified it so that it not just solve sudoku from input list but also fetch input data from *nc wannahack.iitbhucybersec.in*.
+- Here is my code :
+  ```
+  from pwn import *
+  io = remote('wannahack.iitbhucybersec.in', 63817)
+
+  def findNextCellToFill(grid, i, j):
+        for x in range(i,9):
+                for y in range(j,9):
+                        if grid[x][y] == 0:
+                                return x,y
+        for x in range(0,9):
+                for y in range(0,9):
+                        if grid[x][y] == 0:
+                                return x,y
+        return -1,-1
+  def isValid(grid, i, j, e):
+        rowOk = all([e != grid[i][x] for x in range(9)])
+        if rowOk:
+                columnOk = all([e != grid[x][j] for x in range(9)])
+                if columnOk:
+                        secTopX, secTopY = 3 *(i//3), 3 *(j//3)
+                        for x in range(secTopX, secTopX+3):
+                                for y in range(secTopY, secTopY+3):
+                                        if grid[x][y] == e:
+                                                return False
+                        return True
+        return False
+
+  def solveSudoku(grid, i=0, j=0):
+        i,j = findNextCellToFill(grid, i, j)
+        if i == -1:
+                return True
+        for e in range(1,10):
+                if isValid(grid,i,j,e):
+                        grid[i][j] = e
+                        if solveSudoku(grid, i, j):
+                                return True
+                        grid[i][j] = 0
+        return False
+  for _ in range(10):
+        grid=[]
+        io.recvuntil('>>')
+        line = io.recvline().strip()
+        for i in range(9):
+            line =io.recvline().strip().decode()
+            line = line.replace('_', '0')
+            numbers = list(map(int, line.split()))
+            grid.append(numbers)
+        a = solveSudoku(grid)
+        io.recvuntil('>>')
+        for i in range(9):
+            io.sendline(' '.join(map(str, grid[i])))
+        if _ == 9:
+                for i in range(9):
+                        print(io.recvline().decode())
+  ```
+- Flag : WannaHack{Very_3Ay_sud0KU_indE3D_wZ4EYay4}
+
+### 21. The Social Network 
+**Submisssion Time** @ Jan 12th 7:21:39 PM  
+**Value** : 405 , **Tag** : Web  
+
+***Solution***  
+- This problem was stright forward but a lot of time consuming and harder code compared to previous one.
+- The problem required to gather data from 5 Hostel from a website and present it in a JSON file.
+- Due to complex nature of code of problem I am attaching [link to the code] instead of writing it here.
