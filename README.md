@@ -155,7 +155,7 @@ _Writeup of challenges solved by me during WannaHack2025 , a annual Capture the 
 
   ***Solution***
   - This one is also preaty stright forward
-  - Just click on Initiate Suffering and put the given commmand in WSL/Linux/Ubantu Command prompt.
+  - Just click on Initiate Suffering and put the given commmand in WSL/Linux/Ubantu terminal.
   -  Flag : WannaHack{345y_netcat_fVcHlP9D}
 
   ### 16. Cheap Amazon
@@ -163,4 +163,19 @@ _Writeup of challenges solved by me during WannaHack2025 , a annual Capture the 
   **Value** : 50 , **Tag** : PWN
 
   ***Solution***
-  - Challenge 
+  - Challenge had a C file and a NetCat link in it. Upon running nc command in terminal I realised that the provided chall.c file is code used in NetCat link.
+  - Our goal is to find vulnerability in C code to make our balance enough to buy flag.
+  - We can exploit it with integer underflow.
+  - Following is one exmple of inputs to cause underflow and buy flag :
+    ```
+    Option : 1
+    Enter amount of money to withdraw : -20000000000
+    Option : 2
+    Enter amount of money to withdraw : -20000000000
+    Option: 3
+    ```
+  - Flag : WannaHack{w3lc0m3_70_pwn1ng_VGtoEJct}
+
+  ### 17. Cheap Amazon Revange
+  **Submission Time** @ Jan 12th 1:44:59 AM
+  **Value**
