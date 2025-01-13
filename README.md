@@ -1,13 +1,15 @@
 ![Logo](./images/Title_2-removebg-short.svg)
 #
 _Writeup of challenges solved by me during WannaHack2025 , a annual Capture the Flag competition hosted by IIT(BHU)CyberSec and the COPS Infosec vertical._
+## Challenges
+_****Sorted based on Submission Time****_
 ### 1. i love chess
 **Submission Time** @ Jan 10th 11:40:50 PM  
 **Value** : 421 , **Tag** : Forensics , **Note** : First Blood  
   
   ***Solution***  
-- The link provided in challenge takes us to the Game analysis between 2 players (Most probably BOTS) . After looking at computer analysis of game I immediatly remembered about [a youtube video](https://www.youtube.com/watch?v=TUtafoC4-7k) which I watched in last September. The above mentioned video explains idea of storing data in form of PGN (Notation used in chess to record a chess match).
-- After some google serches i found **[a website](https://incoherency.co.uk/chess-steg/)** which helped to decode data from PGN.
+- The link provided in challenge takes us to the Game analysis between 2 players. After looking at computer analysis of game I immediatly remembered about [a youtube video](https://www.youtube.com/watch?v=TUtafoC4-7k) which I watched in last September. Though the above mentioned video has just a little relation to this challenge but the key idea of using PGN to store information stucked and made me think about challenge in right way.
+- After some google serches i found about **[a website](https://incoherency.co.uk/chess-steg/)** which decoded data from PGN.
 - Flag : WannaHack{ch3ss_1s_4dd1ct1v3}  
 
 ### 2. The Turings Challenge
@@ -59,8 +61,9 @@ _Writeup of challenges solved by me during WannaHack2025 , a annual Capture the 
  ***Solution***
  - The file with challenge ends with extention .pcap . These files contain packet data of a network and are used to analyze the network characteristics.
  - To open and analyze such file a packet analyzer like **WireShark** is used.
- - After opening the file in **WireShrak** and looking for various things in the application I found out that after searching word ***DATA*** in search box there were **9 packets** which had data hidden in them.
- - After carefully examining them we get a **BASE 64** encoded string.
+ - After opening the file in **WireShrak** and looking for various things in the application I found out that initial TCP packets contain information about conversation between two people.
+ - After carefully examining them we get a **BASE 64** encoded string
+   ```_V2FubmFIYWNre1RDUF9FTkMwREVEX0NINFR9_.```
  - Note : **7w** isn't part of string as when you hover your mouse over the string **WireShark** doesn't highlight it.
  - Decoding the **Base 64** string an online decoder gives us our desired flag.
  - Flag : WannaHack{TCP_ENC0DED_CH4T}
@@ -90,7 +93,7 @@ _Writeup of challenges solved by me during WannaHack2025 , a annual Capture the 
 **Value** : 50 , **Tag** : OSNIT  
 
 ***Solution***  
-- This one is preety stright forward and require no thinking , even if you don't know A-B-C you can ofcourse Google it.
+- This one is preety stright forward and require no thinking , even if you don't know A-B-C you can ofcourse just Google it.
 - A is a Torjan , B is a Virus and C is Ransomware.
 - Flag : WannaHack{Trojan-Virus-Ransomware}
 
@@ -125,7 +128,7 @@ _Writeup of challenges solved by me during WannaHack2025 , a annual Capture the 
 
 ***Solution***
 - The most obvious thing to do was submit flag as WannaHack{flag_string} as solution but this is just a red herring.
-- Upon opening **Inspect Tab** under **Elements** menu we can see the **HTML** used for website.
+- Upon opening **Inspect Tab** --> **Elements**  we can see the **HTML** used for website.
 - The flag is part of **comment** inside the pages HTML content.
 - Flag : WannaHack{4lw4ys_r34d_7h3_ru135}
 
@@ -145,8 +148,8 @@ _Writeup of challenges solved by me during WannaHack2025 , a annual Capture the 
 **Value** : 50 , **Tag** : Misc
 
 ***Solution***
-- The Sanity Txt file was a massive red herring for this challenge and quite waste of time for me too.
-- I was bit biased towards thought that flag must be hidden in chat or in admin profile (Like CicadaIITBHU) that I just didn't noticed sub-heading of **#rules** for quite a lot of time.
+- The Sanity.txt was a massive red herring for this challenge and quite waste of time for me too.
+- I was bit biased towards thought that flag must be hidden in chat or in admin profile (Like CicadaIITBHU) that I just didn't noticed sub-heading of **#rules** for quite sometime.
 - Flag : WannaHack{y0u_4r3_54n3_6969}
 
 ### 15. Easy Cat
@@ -155,7 +158,7 @@ _Writeup of challenges solved by me during WannaHack2025 , a annual Capture the 
 
 ***Solution***
 - This one is also preaty stright forward
-- Just click on Initiate Suffering and put the given commmand in WSL/Linux/Ubantu terminal.
+- Just click on Initiate Suffering and run the given commmand in WSL/Linux/Ubantu terminal.
 -  Flag : WannaHack{345y_netcat_fVcHlP9D}
 
 ### 16. Cheap Amazon
@@ -166,6 +169,7 @@ _Writeup of challenges solved by me during WannaHack2025 , a annual Capture the 
 - Challenge had a C file and a NetCat link in it. Upon running nc command in terminal I realised that the provided chall.c file is code used in NetCat link.
 - Our goal is to find vulnerability in C code to make our balance enough to buy flag.
 - We can exploit it with integer underflow.
+- 
 - Following is one exmple of inputs to cause underflow and buy flag :
   ```
     Option : 1
@@ -359,5 +363,6 @@ uppercase.
 - Searching Image with IIT(BHU) tag led me to linkedin profile of person in image **Naman Tandel**. By using information on his linkedin page I got to know he is my senior of batch 2023.
 - By usingg the list of Hostel allotment of freshers of 2023, I found out his roll number.
 - Flag :  WannaHack{231022097}
+
 
 ### The End
