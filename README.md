@@ -219,7 +219,7 @@ _Writeup of challenges solved by me during WannaHack2025 , a annual Capture the 
   ```
 - Flag : WannaHack{pwntools_m4g1c_duBuTWnd}
 
-### 18. impossible  
+### 19. impossible  
 **Submission Time** @ Jan 12th 4:43:05 AM  
 **Value** : 120 , **Tag** : Misc  
 
@@ -230,7 +230,7 @@ uppercase.
 - Hence a string like ßßßßßßßßßßßßS would satify all the conditions.
 - Flag : WannaHack{m0r3_l1k3_1_4m_p0551bl3_0aHYUg10}
 
-### 19. Guess  
+### 20. Guess  
 **Submission Time** : Jan 12th 10:35:23 AM  
 **Value** : 405 , **Tag** : PPC  
 
@@ -258,7 +258,7 @@ uppercase.
   ```
 - Flag : WannaHack{m3n_gu335_suks_5tjZX6A8}  
 
-### 20. Easy Sudoko  
+### 21. Easy Sudoko  
 **Submission Time** @ Jan 12th 12:08:37 PM  
 **Value** : 405 , **Tag** : 292  
 
@@ -323,11 +323,41 @@ uppercase.
   ```
 - Flag : WannaHack{Very_3Ay_sud0KU_indE3D_wZ4EYay4}
 
-### 21. The Social Network 
+### 22. The Social Network 
 **Submisssion Time** @ Jan 12th 7:21:39 PM  
 **Value** : 405 , **Tag** : Web  
 
 ***Solution***  
 - This problem was stright forward but a lot of time consuming and harder code compared to previous one.
 - The problem required to gather data from 5 Hostel from a website and present it in a JSON file.
-- Due to complex nature of code of problem I am attaching [link to the code] instead of writing it here.
+- Due to complex nature of code of problem I am attaching [link to the code](https://github.com/RudranilJadhav/WannaHack-CTFWriteup/tree/main/The%20Social%20Network) instead of writing it here.
+- I must admit that I heavly used ChatGTP's in solving this challenge as I was clueless against InfiniteScroll and had no prior exprenience in creating an automated chrome Bot to scroll to infinty and beyond.😉
+- Note : You need to constantly click on 'Prolong Suffering' as this will avoid TimeOut and make sure get all hostel data on similar Port number as names are randomly genrated with each diffrent port.
+- Flag : WannaHack{}
+
+### 23. Safest Bank In The World  
+**Submission Time** @ Jan 12th 7:36:42 PM  
+**Value** : 405 , **Tag** : Web  
+
+***Solution***  
+- Since I couldn't find any thing vulnerable in login and signup source pages in Inspect menu , I decided to create a account and sign up for the bank .
+- After sign up and login , first thing you see is **New Transfer** , by sending some money to either of 2 accounts mentioned in challenge. We get to a transaction details window.
+- The bank gives this transaction as id = 13 , this means there were 12 transactions before this.
+- By cheaking for each transaction id we can find our desired transaction at id = 12
+- The note contains flag.
+- Flag : WannaHack{1n53cur3_d1r3ct_0bj3ct_r3f3r3nc3_Bgy8k0oO}
+
+### 24. Text First Search  
+**Submission** @ Jan 12th 10:28:57 PM  
+**Value** : 280 , **Tag** : OSNIT  
+
+***Solution***  
+- By using the exiftool it becomes clear that the file provided in challenge is a txt file.
+- Google searching first few sub-string of the txt file i.e */9j/4AAQSkZJRgABAQAAAQABAAD* I got to know that this text file is JPEG file converted in BASE 64 .
+- By online tool such as [Base64 Guru](https://base64.guru/converter/decode/image/jpg) we can decode the text to jpeg.
+- Just a normal Google Lens search showed me same wall that which was present in image but nothing usefull to solve problem.
+- Searching Image with IIT(BHU) tag led me to linkedin profile of person in image **Naman Tandel**. By using information on his linkedin page I got to know he is my senior of batch 2023.
+- By usingg the list of Hostel allotment of freshers of 2023, I found out his roll number.
+- Flag :  WannaHack{231022097}
+
+### The End
