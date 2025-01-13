@@ -260,7 +260,7 @@ uppercase.
 
 ### 21. Easy Sudoko  
 **Submission Time** @ Jan 12th 12:08:37 PM  
-**Value** : 405 , **Tag** : 292  
+**Value** : 405 , **Tag** : PPC  
 
 ***Solution***  
 - Just like previours problem this one too don't require exctrating a data from file or find hidden information , All we have to do is program to solve sudoku and recive and send requests via PWN tools.
